@@ -7,7 +7,7 @@ pipeline {
             }
             
             steps {
-               withSonarQubeEnv(installationName: 'Production SonarQubeScanner', credentialsId: 'SonarQubeToken') {
+               withSonarQubeEnv(installationName: 'SonarQubeScanner', credentialsId: 'SonarQube') {
                 sh 'mvn clean package sonar:sonar'
                 }
             }
